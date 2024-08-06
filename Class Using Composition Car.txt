@@ -1,0 +1,22 @@
+// Car class uses composition to include an Engine
+public class Car {
+    // The Car class "has-a" Engine, demonstrating composition
+    private Engine engine;
+    
+    // Constructor to set the engine type
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+
+    // Method to start the car
+    public void startCar() {
+        System.out.println("Car is starting...");
+        engine.start();
+    }
+
+    // Method to stop the car
+    public void stopCar() {
+        System.out.println("Car is stopping...");
+        engine.stop();
+    }
+}

@@ -1,0 +1,21 @@
+// Main class to demonstrate composition and interfaces
+public class Main {
+    public static void main(String[] args) {
+        // Create PetrolEngine and DieselEngine objects
+        Engine petrolEngine = new PetrolEngine();
+        Engine dieselEngine = new DieselEngine();
+        
+        // Create Car objects with different engines
+        Car petrolCar = new Car(petrolEngine);
+        Car dieselCar = new Car(dieselEngine);
+        
+        // Use the Car objects
+        System.out.println("Using Petrol Car:");
+        petrolCar.startCar(); // Output: Car is starting... Petrol engine starting...
+        petrolCar.stopCar();  // Output: Car is stopping... Petrol engine stopping...
+        
+        System.out.println("\nUsing Diesel Car:");
+        dieselCar.startCar(); // Output: Car is starting... Diesel engine starting...
+        dieselCar.stopCar();  // Output: Car is stopping... Diesel engine stopping...
+    }
+}
